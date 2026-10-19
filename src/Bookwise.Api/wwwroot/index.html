@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book an appointment</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <p class="eyebrow">Online booking</p>
+      <h1 id="business-name">Book an appointment</h1>
+    </header>
+
+    <section class="step" id="step-service">
+      <h2><span class="num">1</span> Choose a service</h2>
+      <div id="services" class="options" role="radiogroup" aria-label="Services"></div>
+    </section>
+
+    <section class="step" id="step-time" hidden>
+      <h2><span class="num">2</span> Pick a time</h2>
+      <div class="row">
+        <label>Date <input type="date" id="date"></label>
+        <label>With <select id="staff"><option value="">Anyone available</option></select></label>
+      </div>
+      <p id="tz-note" class="muted"></p>
+      <div id="slots" class="slots" aria-live="polite"></div>
+    </section>
+
+    <section class="step" id="step-details" hidden>
+      <h2><span class="num">3</span> Your details</h2>
+      <p id="summary" class="summary"></p>
+      <form id="details-form" novalidate>
+        <label>Full name <input name="customerName" autocomplete="name" required minlength="2" maxlength="100"></label>
+        <label>Email <input name="customerEmail" type="email" autocomplete="email" required maxlength="200"></label>
+        <label>Phone (optional) <input name="customerPhone" type="tel" autocomplete="tel" maxlength="30"></label>
+        <button type="submit" id="book-button">Confirm booking</button>
+      </form>
+    </section>
+
+    <section class="step done" id="step-done" hidden>
+      <h2>You're booked</h2>
+      <p id="confirmation"></p>
+      <p class="muted">Keep this link to view or cancel your booking:</p>
+      <p><a id="manage-link" href="#">Manage my booking</a></p>
+    </section>
+
+    <p id="error" class="error" role="alert" hidden></p>
+  </main>
+  <footer>Powered by Bookwise · <a href="/scalar">API docs</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage booking</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <p class="eyebrow">Your booking</p>
+      <h1 id="title">Loading…</h1>
+    </header>
+    <section id="details" class="step" hidden>
+      <dl class="details">
+        <dt>Reference</dt><dd id="ref"></dd>
+        <dt>Service</dt><dd id="service"></dd>
+        <dt>With</dt><dd id="staff"></dd>
+        <dt>When</dt><dd id="when"></dd>
+        <dt>Price</dt><dd id="price"></dd>
+        <dt>Status</dt><dd id="status"></dd>
+      </dl>
+      <button id="cancel-button" class="secondary" hidden>Cancel this booking</button>
+    </section>
+    <p id="error" class="error" role="alert" hidden></p>
+    <p><a href="/">Make another booking</a></p>
+  </main>
+  <script src="manage.js"></script>
+</body>
+</html>

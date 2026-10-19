@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Bookwise.Api/Bookwise.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Bookwise.Tests/Bookwise.Tests.csproj" />
+  </Folder>
+</Solution>
